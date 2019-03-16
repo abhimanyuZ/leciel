@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+ html, body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Roboto', sans-serif;
+     text-rendering: optimizeLegibility;
+     background-color: #1c1c1c;
+     height: 100%;
+}
+ * {
+     box-sizing: border-box;
+}
+ img {
+
+     max-width: 100%;
+
+}
+.white-border-button a {
+	padding: 14px 20px;
+	background-color: transparent;
+	border: 1px solid #ff3728;
+	border-radius: 30px;
+	color: #fff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: none;
+	transition: all 0.5s;
+}
+ .container {
+     width: 100%;
+     max-width: 800px;
+     margin: 0 auto;
+     margin-top: -120px;
+     box-sizing: border-box;
+     padding: 0 20px;
+}
+ h2 {
+     font-size: 3rem;
+     text-transform: uppercase;
+     margin: 0;
+     color: white;
+     font-weight: 900;
+}
+ p {
+     line-height: 1.6;
+}
+ h2 span {
+     font-size: 1.2rem;
+}
+ .absolute {
+     position: absolute;
+     width: 100%;
+     height: auto;
+     margin-top: 100px;
+}
+ #hero {
+     background: #E9E9E9;
+     overflow: hidden;
+     position: relative;
+     min-height: 850px;
+    background-image: url(../../img/photography.jpeg);
+     background-size: cover;
+     background-position: top center;
+
+}
+ #hero #bike {
+     position: absolute;
+     left: 50%;
+     margin-left: -275px;
+     top: 50px;
+     width: 550px;
+     text-align: center;
+}
+ #hero #kaneda {
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 270px;
+     margin-left: auto;
+     margin-right: auto;
+
+     text-align: center;
+}
+ #hero #kaneda img {
+
+}
+ #hero #akira {
+     position: absolute;
+     top:57%;
+     bottom: 50px;
+     margin-left: auto;
+     margin-right: auto;
+
+     text-align: center;
+}
+#content {
+	padding: 100px 0;
+	background: #1C1C1C;
+	background-image: url(https://jeffbredenkamp.neocities.org/bg_content-min.png), url(https://jeffbredenkamp.neocities.org/bg_grey-min.png);
+	background-position: top;
+	background-repeat: repeat-x, repeat;
+}
+
+html {
+	height: 100%;
+	font-family: 'Nunito', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+
+	line-height: 1.5;
+}
+
+h1 {
+	font-weight: 200;
+	font-size: 3rem;
+	color: white;
+	text-align: center;
+}
+
+.tabs {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.tab-list {
+	padding-bottom: 1rem;
+}
+
+.tab {
+  margin-top: 30px;
+  margin-left: -80px;
+	border: 1px solid transparent;
+	border-radius: 40px;
+	display: inline-block;
+	text-decoration: none;
+	padding: .5rem 1rem;
+	color: rgba(255, 255, 255, .6);
+	font-weight: 700;
+  margin-right: 80px;
+
+}
+
+.tab.active {
+	color: white;
+	background: rgba(255,255,255,.1);
+	border: 1px solid rgba(255, 255, 255, .6);
+
+}
+.tab-content {
+	background: #1c1c1c;
+  font-size: 18px;
+	display: none;
+	padding: 1.5rem fixed;
+	color: white;
+  margin-left: -65px;
+  margin-right: -80px;
+  text-align: justify;
+
+}
+
+.show {
+
+	display: block;
+}
+
+.name{
+  width: 700px;
+  height: auto;
+  left: 28%;
+  top: 60%;
+}
+
+#back{
+  margin-bottom: -30px;
+  margin-left: 0px;
+  width: 50px;
+  left: 0%;
+  bottom: 10%;
+}
+
+.back:hover{
+  background-image: url(https://image.ibb.co/gpQhqU/back_hover.png);
+}
