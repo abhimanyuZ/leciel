@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins')
+$font: 'Poppins', sans-serif
+$accent: #16f
+$text: #222
+html,
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	height: 100%
+	box-sizing: border-box
+	font-family: $font
+*,
+*:after,
+*:before
+	box-sizing: inherit
+@mixin centered
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+@mixin tran
+	transition: 0.3s ease
+
+@mixin media-max($size)
+	@media screen and (max-width: $size)
+		@content
+
+@mixin media-min($size)
+	@media screen and (min-width: $size)
+		@content
+.basket-component
+	max-width: 650px
+	padding: 1em
+	height: auto
+	position: absolute
+	overflow: hidden
+	background-color: #fff
+	box-shadow: 2px 2px 15px #aaa
+	z-index: 1000
+	width: 100%
+	top: 3em
+	right: 2em
+	transform-origin: 50% 50%
+	+media-max(736px)
+		top: 50%
+		left: 50%
+		transform: scale(0) translate(-50%, -50%)
+		font-size: 0.8em
+		position: fixed
+	+tran
+	transform: scale(0) translate(0%, 0%)
+	&--isActive
+		transform: scale(1) translate(0%, 0%) 
+		+media-max(736px)
+			transform: scale(1) translate(-50%, -50%)
+	&__item
+		width: 100%
+		display: flex
+		position: relative
+		margin-bottom: 1.5em
+		box-shadow: 2px 2px 15px #aaa
+		border-radius: 3px
+	&__img
+		width: 30%
+		min-height: 100%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center center
+	&__delete-btn
+		position: absolute
+		top: 0em
+		right: 0em
+		display: inline-block
+		width: 20px
+		height: 20px
+		text-align: center
+		line-height: 10px
+		background-color: red
+		border: none
+		color: #fff
+		cursor: pointer
+		&:hover
+			background-color: #f00 * 0.8
+	&__content
+		padding: 1em
+		width: 70%
+	&__title
+		margin: 0 0 0.2em
+	&__title--intotal
+		font-size: 1.3em
+		margin-bottom: 0.5em
+	&__descr
+		padding: 0
+		margin: 0 0 0.2em
+		font-size: 0.9em
+		span
+			float: right
+	&__descr--intotal
+		font-size: 1.1em
+		margin-bottom: 0.2em
+	&__amount
+		margin-top: 0.5em
+	&__amount-container
+		float: right
+	&__count-btn
+		border: none
+		background-color: $accent
+		color: #fff
+		width: 30px
+		height: 30px
+		border-radius: 3px
+		cursor: pointer
+		box-shadow: 3px 3px 9px #aaa
+		&:hover
+			background-color: $accent * 0.8
+	&__count-output
+		display: inline-block
+		width: 30px
+		height: 30px
+		text-align: center
+		line-height: 30px
+	&__continue-btn
+		border: none
+		background-color: $accent
+		color: #fff
+		padding: 1em 0.5em
+		float: right
+		width: 30%
+		text-transform: uppercase
+		box-shadow: 3px 3px 9px #aaa
+		margin-top: 1em
+		cursor: pointer
+		border-radius: 3px
+		&:disabled
+			background-color: $accent * 1.9
+			box-shadow: none
+			&:hover
+				background-color: $accent * 1.9
+		&:hover
+			background-color: $accent * 0.8
+	&__send-layout
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 4
+		background-color: #fff
+		transform: scale(0)
+		+tran
+	&__send-layout--isActive
+		transform: scale(1)
+	&__close-btn
+		position: absolute
+		top: 1em
+		right: 1em
+		border: none
+		background-color: $accent
+		color: #fff
+		width: 30px
+		height: 30px
+		border-radius: 3px
+		cursor: pointer
+		box-shadow: 3px 3px 9px #aaa
+	&__form
+		display: flex
+		flex-direction: column
+		max-width: 300px
+		margin: 1em auto 0
+		position: absolute
+		width: 100%
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__label
+		margin-bottom: 0.7em
+	&__label-content
+		display: block
+		font-size: 0.7em
+	&__input
+		width: 100%
+		padding: 0.5em 0.5em
+		font-size: 1.1em
+		border: 1px solid #aaa
+		border-radius: 3px
+	&__send
+		border: none
+		background-color: $accent
+		color: #fff
+		padding: 1em 0.5em
+		text-transform: uppercase
+		box-shadow: 3px 3px 9px #aaa
+		margin-top: 1em
+		cursor: pointer
+		border-radius: 3px
+		&:hover
+			background-color: $accent * 0.8
+	&__banner
+		position: absolute
+		top: -1em
+		left: 0
+		padding: 1em
+		width: 100%
+		min-height: 100%
+		transform: scale(0)
+		background-color: #fff
+		z-index: 100
+		span
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		+tran
+	&__banner--isActive
+		transform: scale(1)
+/* --- CARDS --- */
+.container
+	max-width: 1200px
+	margin: 0 auto
+	&:before
+		content: ''
+		width: 100%
+		height: 0
+		display: table
+		clear: both
+.col
+	float: left
+	padding: 1em
+	+media-min(1200px)
+		width: calc(100% / 3)
+	+media-max(1200px)
+		width: calc(100% / 3)
+	+media-max(800px)
+		width: calc(100% / 2)
+	+media-max(590px)
+		width: calc(100%)
+.shadow_sm
+	box-shadow: 1px 1px 5px #aaa
+.shadow_md
+	box-shadow: 3px 3px 15px #aaa
+.shadow_lg
+	box-shadow: 6px 6px 30px #aaa
+.shadow_xl
+	box-shadow: 10px 10px 50px #aaa
+.card-item
+	max-width: 100%
+	position: relative
+	z-index: 1
+	&__divider
+		width: 100%
+		height: 1px
+		background-color: #ddd
+	&__title
+		font-size: 1.7em
+		position: absolute
+		z-index: 2
+		background-color: rgba(255,255,255, 0.7)
+		padding: 0.3em 0.4em
+		width: 100%
+		color: $text
+	&__img-wrapper
+		position: relative
+		max-width: 100%
+		height: 200px
+		overflow: hidden
+	&__img
+		width: 100%
+		min-height: 100%
+		+centered
+	&__content
+		padding: 1em 0.8em
+	&__text-item
+		padding: 0
+		margin: 0
+		color: $text
+		font-size: 0.9em
+	&__footer
+		padding: 0.5em
+		display: flex
+		justify-content: space-between
+	&__link
+		color: $accent
+		text-decoration: none
+		display: inline-block
+		padding: 0.5em 0.4em 0.5em
+		+tran
+		&:hover
+			color: $accent * 0.7
+			text-shadow: 1px 1px 1px #ddd
+	&__add-button
+		background-color: $accent
+		border: none
+		padding: 0.1em 3em
+		color: #fff
+		border-radius: 3px
+		text-transform: uppercase
+		box-shadow: 3px 3px 9px #aaa
+		cursor: pointer
+		+tran
+		&:hover
+			background-color: $accent * 0.8
+.header
+	width: 100%
+	height: 60px
+	background-color: $accent
+.basket-toggle
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	margin: 0 0 0 0
+	padding-right: 1em
+	color: #fff
+	cursor: pointer
+	+tran
+	&:hover
+		color: $accent / 0.2	
+		svg
+			fill: $accent / 0.2	
+	svg
+		fill: #fff
+		
+		
