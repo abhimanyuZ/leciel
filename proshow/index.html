@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="master.css">
+</head>
+<body>
+
+     <div class="navbar">
+          <div class="logo">
+            <p>MASALA COFFEE</p>
+          </div>
+
+     </div>
+
+     <div class="bottom">
+          <p>THE TEAM</p>
+     </div>
+
+     <section class="center slider">
+          <div>
+               <img src="sooraj santhosh.jpg" alt="">
+               <h3>SOORAJ SANTHOSH</h3>
+               <p>Lead Vocal</p>
+          </div>
+          <div>
+               <img src="kenneth jerald.jpg" alt="">
+               <h3>KENNETH GERALD</h3>
+               <p>KEYBOARD</p>
+          </div>
+          <div>
+               <img src="paul joseph.jpg" alt="">
+               <h3>PAUL JOSEPH</h3>
+               <p>BASS GUITAR</p>
+          </div>
+          <div>
+               <img src="preeth ps.jpg" alt="">
+               <h3>PREETH PS</h3>
+               <p>LEAD GUITAR</p>
+          </div>
+          <div>
+               <img src="krishna raj.jpg" alt="">
+               <h3>KRISHNA RAJ</h3>
+               <p>VIOLIN</p>
+          </div>
+          <div>
+               <img src="varun sunil.jpg" alt="" >
+               <h3>VARUN SUNIL</h3>
+               <p>PERCUSSION</p>
+          </div>
+          <div>
+               <img src="daya sankar.jpg" alt="">
+               <h3>DAYA SANKAR</h3>
+               <p>DRUMS</p>
+          </div>
+          <div>
+               <img src="david crimson.jpg" alt="">
+               <h3>DAVID CRIMSON</h3>
+               <p>GUITAR</p>
+          </div>
+     </section>
+
+     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+     <script src="./slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+     <script type="text/javascript">
+
+     $(document).on('ready', function() {
+
+     $(".center").slick({
+
+     dots: false,
+     infinite: false,
+     centerMode: true,
+     slidesToShow: 2,
+     slidesToScroll: 1,
+     arrows: false,
+
+     responsive: [{
+
+     breakpoint: 1024,
+     settings: {
+          slidesToShow: 2,
+          infinite: true
+     }
+
+}, {
+
+     breakpoint: 600,
+     settings: {
+          slidesToShow: 1,
+          dots: true
+     }
+
+}, {
+
+     breakpoint: 300,
+     settings: "unslick" //destroy slick
+
+}]
+
+});
+
+});
+
+     </script>
+</body>
+</html>
