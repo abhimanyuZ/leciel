@@ -1,7 +1,7 @@
 # leciel
 A Web-Platform for annual cultural festival Leciel'18 of NIT Pudicherry India
 
-# Demo:
+# Demo: <a href="https://ecom-abhi.000webhostapp.com/leciel" target="_blank">Leciel</a>
 
 # Details:
   I worked on this website in 2018. It has a very smooth UI which uses multiple JS frameworks like Jquery, Bootstrap etc.<br>
@@ -20,5 +20,5 @@ A Web-Platform for annual cultural festival Leciel'18 of NIT Pudicherry India
     
    <br><br>
     
-   <b>Profile Page:</b><br>
-   ![profile](./demo/profile.png)
+   <b>Home Page:</b><br>
+   ![profile](./demo/home.png)
